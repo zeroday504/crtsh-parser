@@ -1,0 +1,5 @@
+BeautifulSoup
+requests
+colorama
+sys
+argparse
