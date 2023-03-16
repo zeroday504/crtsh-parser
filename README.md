@@ -1,6 +1,8 @@
 # crtsh-parser
 Tool used to query crt.sh and scrape subdomains from resulting webpage, storing them in a parsable and pipeable output file
 
+![image](https://user-images.githubusercontent.com/84281259/225765171-2f33c078-0777-4e6b-8d6a-6f6ff9b20c80.png)
+
 # crtsh-parser.sh
 Usage: `./crtsh-parser.sh <keyword> <top-level domain>`
 
