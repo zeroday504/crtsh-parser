@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set the color variable
+# Set the color variables
 green='\033[0;32m'
 red='\033[0;31m'
 clear='\033[0m'
