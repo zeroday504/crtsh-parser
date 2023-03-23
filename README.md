@@ -25,7 +25,6 @@ Example: `python3.10 crtsh-parser.py -d nabisco.com`
 
 <img width="523" alt="image" src="https://user-images.githubusercontent.com/84281259/225760026-ca792b18-c2d1-4cff-ae32-d77ab77b8f29.png">
 
-crtsh-parser.py does not current support HTTP status code checks or IP lookups, this will be implemented in later versions.
 
 ### Installation
 `git clone https://github.com/zeroday504/crtsh-parser.git`
