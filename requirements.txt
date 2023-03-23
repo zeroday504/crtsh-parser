@@ -3,3 +3,7 @@ requests
 colorama
 sys
 argparse
+time
+bs4
+urllib3
+socket
