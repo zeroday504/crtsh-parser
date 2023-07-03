@@ -115,15 +115,18 @@ else:
 	    'Sec-Fetch-Site': 'none',
 	    'Sec-Fetch-User': '?1',
 	}
+		file = open("live_subdomains.txt", "w")
 		for url in sites2:
 			try:
 				long_url = 'https://' + url
 				r = requests.get(long_url, timeout=7, allow_redirects=True, verify=False)
+				
 				if r.status_code == 200:
 					html = bs4.BeautifulSoup(r.text, features="lxml")
 					print (Fore.GREEN + url + ' ' + 'Status code: ' + str(r.status_code) )
 					print ('	' + html.title.text)
 					print ("	IP: " + socket.gethostbyname(url) + '\n')
+					file.write(url + "\n")
 				else: 
 					print (Fore.PURPLE + url + ' ' + str(r.status_code))
 			except:
@@ -132,9 +135,11 @@ else:
 				
 		print (Fore.WHITE + "\nSubdomain HTTP status code check has completed.")
 		print ("\nTime elapsed: " + str(round((time.time() - start_time), 2)) + " seconds.")
+		print ("\nLive subdomains have been written to live_subdomains.txt in current directory")
 	elif Status_Code_Check == "N" or Status_Code_Check == "n":
 		print("\n" + Fore.RED + "Status code check not performed. Terminating program.")
 		print ("\nTime elapsed: " + str(round((time.time() - start_time), 2)) + " seconds.")
 	else:
 		print("\n" + Fore.RED + "Invalid entry, terminating program.")
 		print ("\nTime elapsed: " + str(round((time.time() - start_time), 2)) + " seconds.")
+
